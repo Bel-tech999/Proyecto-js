@@ -7,6 +7,15 @@
     <title>ProyectoN1</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <script type="text/javascript">
+        if (localStorage.veces==undefined){
+        localStorage.veces=1;
+        } else {
+        localStorage.veces=Number(localStorage.veces)+1;
+        }
+        document.write("Visitas al museo: "+localStorage.veces+" veces.");
+    </script>
+
 </head>
 
 
@@ -14,7 +23,7 @@
 
 <body>
     
-
+<!--
 <header>
 
     <nav>
@@ -30,11 +39,20 @@
     </nav>
 
 </header>
+-->
+<h1>OBRAS DE ARTE </h1>
+<div id="mostrarAca">
+</div>
 
 
 
-
-
+<!--
+<script>
+    let d = new Date();
+    document.body.innerHTML = "<h1>Time right now is:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+    "</h1>"
+    </script>
+-->
 <script src="app.js">   </script>
 </body>
 </html>

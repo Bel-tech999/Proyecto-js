@@ -45,3 +45,22 @@ li {
 	width: 15%;
 	font-size: 20px;
 }
+
+
+
+h1{
+	font-family:'Montserrat', sans-serif;
+	justify-content: center;
+}
+
+
+#mostrarAca{
+	background-color: green;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+p{
+	font-family:'Montserrat', sans-serif;
+	font-size: 30px;
+}

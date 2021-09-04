@@ -16,7 +16,7 @@ const objeto1 = new ObraArte(001, "Negroni", "óleo", "XII-XVIII", "Pintura", "S
 const objeto2 = new ObraArte(002, "Lieutaud", "Bronce-Marmol-Metal", "XII-XVIII", "Reloj", "-")
 const objeto3 = new ObraArte(003, "Tiépolo", "Óleo", "XII-XVIII", "Pintura","Tela")
 const objeto4 = new ObraArte(004, "Maldonado", "Óleo", "XX-XXI", "Pintura", "Tela")
-const objeto5 = new ObraArte(005, " Iommi, Enio", "Caños de Hierro", "XX - XXI", "escultura", "sobre base de yeso")
+const objeto5 = new ObraArte(005, "Iommi Enio", "Caños de Hierro", "XX - XXI", "escultura", "sobre base de yeso")
 
 
 ObrasdeArte.push(objeto1)
@@ -50,7 +50,10 @@ const guardarDato = () => {
     datoCliente.push(Usuario1)
     alert("TE HAS REGISTRADO CORRECTAMENTE! "+ nombre + " , se enviara un correo a tu email: " + email)
 }
-guardarDato()
+
+
+
+
 
 const login = () => {
     let nombredeusuario = prompt("Ingrese su Nombre de Usuario")
@@ -64,12 +67,71 @@ const login = () => {
         alert("Usuario no registrado")
     }
     if (contraseña !=null){
-        alert("Bienvenido " + nombre) 
+        alert("Bienvenido " + nombredeusuario) 
     }else {
         alert("contraseña invalida")
     }
 }
+
+
+
+guardarDato()
 login()
+
+const VerObra = () => {
+var holaMundo = prompt("Quiere ver el listado de obras? SI-NO");
+if (holaMundo == "si") {
+    alert("Genial veamos las obras! (: ");
+} else{
+    alert("no podemos ver las obras :(" );
+}
+}
+
+VerObra()
+
+/* Aca convierto los datos pero aun no los tengo definidos de cómo los voy a usar   */
+let datoConvertido = JSON.stringify(ObrasdeArte)
+
+localStorage.setItem("ObrasdeArte", datoConvertido)
+
+
+
+
+
+let seccion = document.getElementById("mostrarAca")
+
+ObrasdeArte.forEach(e => {
+    let div1 = document.createElement("div")
+
+    let p1 = document.createElement("p")
+    p1.textContent = e.id 
+
+    let p2 = document.createElement("p")
+    p2.textContent = e.autor
+
+    let p3 = document.createElement("p")
+    p3.textContent = e.tecnica
+
+    let p4 = document.createElement("p")
+    p4.textContent = e.periodo
+
+    let p5 = document.createElement("p")
+    p5.textContent = e.objeto
+
+    let p6 = document.createElement("p")
+    p6.textContent = e.soporte
+
+
+    div1.appendChild(p1)
+    div1.appendChild(p2)
+    div1.appendChild(p3)
+    div1.appendChild(p4)
+    div1.appendChild(p5)
+    div1.appendChild(p6)
+
+    seccion.appendChild(div1)
+})
+
 
 
 
