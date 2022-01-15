@@ -1,66 +1,223 @@
-#cajaMenu {
-	background-color: rgb(220, 247, 220);
-	height: 100px;
-	width: 100%;
-    border-bottom: #BC2710 ;
-    display: flex;
-    justify-content: center;
 
-    
-}
 
-a{
-	text-decoration: none;
-	color: #BC2710;
-	text-transform: uppercase;
-	height: 20px;
-}
-a:hover {
- color: #51C8B7 ; 
 
- cursor: pointer; 
-}
 
-ul{ 
-
+.inicio {
+	background: url("img/fondo.jpg");
+	background-size: 100vw 100vh;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	height: 100%;
-	justify-content: center;
-	margin-right: 0px;
-	margin-left: 0px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	justify-content: space-between;
-	width: 60%;
-
-}
-
-li {
-
-	display: inline-block;
-	color: white;
-
-	font-family:'Montserrat', sans-serif;
-	width: 15%;
-	font-size: 20px;
 }
 
 
-
-h1{
-	font-family:'Montserrat', sans-serif;
-	justify-content: center;
-}
-
-
-#mostrarAca{
-	background-color: rgb(133, 192, 106);
+#main {
+	margin-top: 120px;
+	background-color: #fff;
+	box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+	opacity: 0.8;
+	width: 550px;
+	height: 500px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
-p{
-	font-family:'Montserrat', sans-serif;
-	font-size: 30px;
+
+td {
+	font-family: 'Poppins', sans-serif;
+}
+
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 80px;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 25px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#mostrarAca {
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 2700px;
+	width: 1200px;
+}
+
+.div1 {
+	width: 700px;
+	height: 500px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.div2 {
+	
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	background-color: #E4E4DA;
+	width: 1400px;
+	height: 400px;
+	box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+	opacity: 0.9;
+}
+
+.div3 {
+	justify-content: space-between;
+	justify-content: flex-end;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	background-color: #E4E4DA;
+	width: 1100px;
+	height: 350px;
+}
+
+.div4 {
+	height: 90px;
+	width: 300px;
+	background-color: chartreuse;
+	align-items: center;
+	justify-content: space-evenly;
+	display: flex;
+}
+
+.btn1 {
+	width: 150px;
+	height: 30px;
+}
+
+
+.section1 {
+	align-items: start;
+	flex-direction: column;
+	display: flex;
+	width: 1400px;
+	height: 60px;
+	padding: 0px;
+	background-color: #F2F42C;
+	border-radius: 30px;
+	margin-bottom: 10px;
+	
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	color: black;
+}
+
+.titulo {
+	font-weight: 500;
+	margin-left: 20px;
+	font-size: 18px;
+	color: black;
+}
+
+#tecnica {
+
+	color: #BC2710;
+}
+
+#bienvenido {
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 25px;
+}
+
+#contenedorTexto {
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+
+#arteImg {
+	height: 40px;
+	width: 300px;
+}
+
+#arteImg:hover {
+	transform: scale(1.5);
+	cursor: pointer;
+}
+
+.arteImg2 {
+	height: 150px;
+	width: 90px;
+}
+
+/*codigo de botones*/
+
+	/*{
+	box-sizing: border-box;
+}*/
+
+.divpop {
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.formpop {
+	display: none;
+	position: fixed;
+	left: 45%;
+	top: 5%;
+	transform: translate(-50%, 5%);
+	border: 3px solid #999999;
+	z-index: 9;
+}
+
+.formulario {
+	max-width: 300px;
+	padding: 20px;
+	background-color: #fff;
+}
+
+.formulario input[type=text],
+.formulario input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 20px 0;
+	border: none;
+	background: #eee;
+}
+
+.formulario input[type=text]:focus,
+.formulario input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+.formulario .btnlogin {
+	padding: 12px 20px;
+	border: none;
+	background-color: #8ebf42;
+	color: #fff;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 15px;
+	opacity: 0.8;
+}
+
+.formulario .cancel {
+	background-color: #cc0000;
+}
+
+.formulario .btnlogin:hover,
+.openButton:hover {
+	opacity: 1;
 }

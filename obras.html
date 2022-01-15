@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoN1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+
+
+<body>
+
+    <h1>VENI A VISITAR EL MUSEO MODERNO</h1>
+    <div id="mostrarAca">
+
+    </div>
+
+    <div class="divpop">
+        <div class="formpop" id="formpop">
+            <form class="formulario">
+                <h2>Please Log in</h2>
+                
+                <label for="name">
+                    <strong>Nombre</strong>
+                </label>
+                <input type="text" id="nombre" placeholder="Tu nombre" name="name1" required>
+
+                <label for="apellido">
+                    <strong>Apellido</strong>
+                </label>
+                <input type="text" id="apellido" placeholder="Tu apellido" name="apellido" required>
+                
+                <label for="entradas">
+                    <strong>Cantidad de entradas</strong>
+                </label>
+                <select name="select" id="entradas">
+                    <option value="1"> 1</option>
+                    <option value="2" selected> 2</option>
+                    <option value="3"> 3</option>
+                </select>
+
+                <button type="submit" class="btnlogin"  onclick="imprimir()">imprimir </button>
+                <button type="button" class="cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"> </script>
+
+</body>
+
+</html>

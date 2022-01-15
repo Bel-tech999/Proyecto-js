@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,52 +8,83 @@
     <title>ProyectoN1</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <script type="text/javascript">
-        if (localStorage.veces==undefined){
-        localStorage.veces=1;
-        } else {
-        localStorage.veces=Number(localStorage.veces)+1;
-        }
-        document.write("Visitas al museo: "+localStorage.veces+" veces.");
-    </script>
 
 </head>
 
 
 
 
-<body>
-    
-<!--
-<header>
+<body  class="inicio">
 
-    <nav>
-        <div id="cajaMenu">
-        <ul>
-            <li> <a href="index.html"> Obras de Arte </a> </li>
-            <li> <a href="MENU.html"> MENU</a> </li>
-            <li> <a href="LOCALES.html"> LOCALES </a> </li>
-            <li> <a href="CONTACTO.html"> CONTACTO</a> </li>
-            <li> <a href="PEDI-ONLINE.html"> PEDI ONLINE </a> </li>
-        </ul>  
-        </div>    
-    </nav>
+    <div id="main">
+        <div class="boxTitulo">
+            <h2>Crea tu cuenta</h2>
+        </div>
 
-</header>
--->
-<h1>OBRAS DE ARTE </h1>
-<div id="mostrarAca">
-</div>
+        <div class="boxLogin">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td align="right">Nombre de Usuario</td>
+                    <td><input type="text" placeholder="Ingrese su nombre de Usuario" id="b1" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right"> Contraseña</td>
+                    <td><input type="password" placeholder="Ingrese su contraseña" id="b2" class="tb" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="ingresar" class="btn" onclick="login()" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="registro">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td align="right">Nombre :</td>
+                    <td><input type="text" placeholder="Ingrese su nombre" id="t1" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right"> Correo electronico :</td>
+                    <td><input type="text" placeholder="Ingrese correo electronico" id="t2" class="tb" /></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Direccion :</td>
+                    <td><input type="text" placeholder="Ingrese Direccion" id="t3" class="tb" /></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Crea tu nombre de Usuario :</td>
+                    <td><input type="text" placeholder="nombre de usuario" id="t4" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Crea tu contraseña :</td>
+                    <td><input type="password" placeholder="contraseña" id="t5" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Guardar Datos" class="btn" onclick="registroUsuario()" />
+                        <input type="reset" value="Limpiar Datos" id="res" class="btn" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
 
 
 
-<!--
-<script>
-    let d = new Date();
-    document.body.innerHTML = "<h1>Time right now is:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
-    "</h1>"
-    </script>
--->
-<script src="app.js">   </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="registro.js"></script>
+    <script src="app.js"> </script>
 </body>
+
 </html>
